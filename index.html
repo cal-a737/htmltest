@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML可视化学习与测试</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            background-color: #4285f4;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #4285f4;
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: 500;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .intro {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .github-link {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .github-link:hover {
+            background-color: #555;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 20px 0;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML可视化学习与测试</h1>
+        <p class="subtitle">探索HTML代码的可视化效果与实践</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>项目介绍</h2>
+            <p>欢迎来到HTML可视化学习与测试项目！这个仓库旨在提供一个平台，用于学习HTML代码的可视化效果，并进行各种前端技术的测试和实验。</p>
+            <p>通过这个项目，您可以：</p>
+            <ul>
+                <li>学习HTML、CSS和JavaScript的基础知识和高级技巧</li>
+                <li>查看各种HTML元素的可视化效果</li>
+                <li>测试不同的前端设计模式和布局方案</li>
+                <li>分享您的学习成果和实验结果</li>
+            </ul>
+            <a href="https://github.com/你的用户名/仓库名" class="github-link" target="_blank">访问GitHub仓库</a>
+        </section>
+
+        <h2>示例与测试页面</h2>
+        <div class="container">
+            <!-- 这里可以添加更多的测试页链接卡片 -->
+            <div class="card">
+                <h3>基础HTML元素展示</h3>
+                <p>展示各种HTML基础元素的渲染效果和用法示例。</p>
+                <a href="./examples/basic-elements.html">查看示例 →</a>
+            </div>
+            
+            <div class="card">
+                <h3>CSS布局技术</h3>
+                <p>展示Flexbox、Grid等现代CSS布局技术的实际应用。</p>
+                <a href="./examples/css-layouts.html">查看示例 →</a>
+            </div>
+            
+            <div class="card">
+                <h3>响应式设计</h3>
+                <p>演示如何创建在不同设备上都能良好显示的响应式网页。</p>
+                <a href="./examples/responsive-design.html">查看示例 →</a>
+            </div>
+            
+            <div class="card">
+                <h3>JavaScript交互效果</h3>
+                <p>展示使用JavaScript创建的各种交互效果和动画。</p>
+                <a href="./examples/js-interactions.html">查看示例 →</a>
+            </div>
+            
+            <div class="card">
+                <h3>表单设计与验证</h3>
+                <p>各种表单元素的设计和客户端验证技术展示。</p>
+                <a href="./examples/forms.html">查看示例 →</a>
+            </div>
+            
+            <div class="card">
+                <h3>SVG与Canvas绘图</h3>
+                <p>使用SVG和Canvas进行网页绘图的示例和技巧。</p>
+                <a href="./examples/drawing.html">查看示例 →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 HTML可视化学习与测试项目 | 使用GitHub Pages搭建</p>
+        <p>如有问题或建议，请在<a href="https://github.com/你的用户名/仓库名/issues" target="_blank">GitHub Issues</a>中提出</p>
+    </footer>
+</body>
+</html>

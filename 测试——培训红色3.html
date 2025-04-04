@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <title>人工智能深度赋能高校教学与科研工作高级研修班</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href=
+  "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&amp;family=Noto+Serif+SC:wght@400;600;700;900&amp;display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href=
+  "https://unpkg.com/aos@next/dist/aos.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E11D48',    // 更鲜艳的红色调
+            secondary: '#9F1239',  // 深红色
+            accent: '#FB7185',     // 亮红色
+            light: '#FFF1F2',      // 浅粉色背景
+            dark: '#1E293B',       // 深色文本
+            gold: '#F59E0B',       // 更亮的金色
+            cream: '#FFFBEB',      // 奶油色背景
+            burgundy: '#881337',   // 酒红色
+          },
+          fontFamily: {
+            'serif-sc': ['Noto Serif SC', 'serif'],
+            'sans-sc': ['Noto Sans SC', 'sans-serif'],
+          },
+          boxShadow: {
+            'material': '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+            'material-hover': '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+            'depth-1': '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+            'depth-2': '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+            'depth-3': '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      background-color: #FFFBEB;
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    /* 动态波浪背景 */
+    .wave-bg {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .wave-bg::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23E11D48'/%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%23E11D48'/%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23E11D48'/%3E%3C/svg%3E");
+      background-size: cover;
+      opacity: 0.3;
+      z-index: 0;
+    }
+    
+    /* 贝塞尔曲线过渡动画 */
+    .smooth-transition {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    /* Material Design 卡片效果 */
+    .material-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      overflow: hidden;
+    }
+    
+    .material-card:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      transform: translateY(-5px);
+    }
+    
+    /* 不规则形状背景 */
+    .blob-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    
+    /* 装饰元素 */
+    .decorative-circle {
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0.2;
+      background: linear-gradient(135deg, #E11D48 0%, #FB7185 100%);
+      animation: float 8s ease-in-out infinite alternate;
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+    
+    /* 闪光边框效果 */
+    .glowing-border {
+      position: relative;
+    }
+    
+    .glowing-border::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #E11D48, #F59E0B, #E11D48);
+      background-size: 200% 200%;
+      z-index: -1;
+      animation: glowing 3s ease-in-out infinite;
+    }
+    
+    @keyframes glowing {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    /* 加载动画 */
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #FFFBEB;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .loader {
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+    
+    .loader-circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 8px solid transparent;
+      border-top-color: #E11D48;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    .loader-circle:nth-child(2) {
+      border: 8px solid transparent;
+      border-bottom-color: #F59E0B;
+      animation: spin 1.5s linear infinite reverse;
+    }
+    
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* 滚动进度指示器 */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(to right, #E11D48, #F59E0B);
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s ease;
+    }
+    
+    /* 导航指示器 */
+    .nav-indicator {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+    }
+    
+    .nav-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(225, 29, 72, 0.3);
+      margin: 10px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-dot.active {
+      background-color: #E11D48;
+      transform: scale(1.5);
+    }
+    
+    .nav-tooltip {
+      position: absolute;
+      right: 20px;
+      background-color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      white-space: nowrap;
+      color: #881337;
+      font-weight: 500;
+    }
+    
+    .nav-dot:hover + .nav-tooltip {
+      opacity: 1;
+    }
+    
+    /* 文本高光效果 */
+    .highlight-text {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .highlight-text::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background-color: rgba(225, 29, 72, 0.2);
+      z-index: -1;
+      transform: skewX(-15deg);
+    }
+    
+    /* 内容卡片的不规则形状 */
+    .skewed-card {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .skewed-card::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      background-color: rgba(225, 29, 72, 0.05);
+      z-index: -1;
+      transform: skewY(-2deg);
+      border-radius: 12px;
+    }
+    
+    /* 自定义滚动条 */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #FFFBEB;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #E11D48;
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9F1239;
+    }
+    
+    /* 文本选中样式 */
+    ::selection {
+      background-color: rgba(225, 29, 72, 0.7);
+      color: white;
+    }
+    
+    ::-moz-selection {
+      background-color: rgba(225, 29, 72, 0.7);
+      color: white;
+    }
+    
+    /* 响应式导航菜单 */
+    .menu-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 200;
+    }
+    
+    .menu-button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .menu-button:hover {
+      background-color: #FFFBEB;
+      transform: scale(1.1);
+    }
+    
+    .menu-items {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      padding: 10px;
+      min-width: 200px;
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .menu-items.active {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    
+    .menu-link {
+      display: block;
+      padding: 10px;
+      color: #1E293B;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    
+    .menu-link:hover {
+      background-color: #FFF1F2;
+      color: #E11D48;
+    }
+    
+    /* 移动适配样式 */
+    @media (max-width: 768px) {
+      .grid-layout {
+        grid-template-columns: 1fr;
+      }
+      
+      .nav-indicator {
+        display: none;
+      }
+      
+      .decorative-circle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 加载动画 -->
+  <div id="loaderContainer" class="loader-container">
+    <div class="loader">
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+      <div class=
+      "text-center mt-4 text-primary font-bold font-serif-sc animate__animated animate__pulse animate__infinite">
+        人工智能研修班资料加载中...
+      </div>
+    </div>
+  </div><!-- 滚动进度条 -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+  <!-- 导航指示器 -->
+  <div class="nav-indicator">
+    <div class="nav-dot active" data-section="header"></div>
+    <div class="nav-tooltip">
+      主标题
+    </div>
+    <div class="nav-dot" data-section="about"></div>
+    <div class="nav-tooltip">
+      基本信息
+    </div>
+    <div class="nav-dot" data-section="content"></div>
+    <div class="nav-tooltip">
+      课程内容
+    </div>
+    <div class="nav-dot" data-section="technology"></div>
+    <div class="nav-tooltip">
+      技术实践
+    </div>
+    <div class="nav-dot" data-section="footer"></div>
+    <div class="nav-tooltip">
+      报名信息
+    </div>
+  </div><!-- 菜单导航 -->
+  <div class="menu-container">
+    <div id="menuButton" class="menu-button"></div>
+    <div id="menuItems" class="menu-items">
+      <a href="#header" class="menu-link">主页</a> <a href="#about"
+      class="menu-link"> 关于研修班</a> <a href="#content" class=
+      "menu-link"> 课程内容</a> <a href="#technology" class=
+      "menu-link"> 技术实践</a> <a href="#footer" class="menu-link">
+      报名信息</a>
+    </div>
+  </div><!-- 装饰元素 -->
+  <div class="decorative-circle" style=
+  "width: 300px; height: 300px; top: -100px; right: -100px;"></div>
+  <div class="decorative-circle" style=
+  "width: 200px; height: 200px; bottom: 100px; left: -50px;"></div>
+  <!-- 主容器 -->
+  <div class="container mx-auto py-16 px-4 md:px-8">
+    <!-- 顶部标题区域 -->
+    <header id="header" class="mb-20 py-12 relative">
+      <div class=
+      "wave-bg relative z-10 bg-primary text-white p-8 rounded-2xl shadow-material-hover">
+        <div class="flex flex-col md:flex-row md:items-center">
+          <div class="md:mr-8 mb-6 md:mb-0 flex justify-center">
+            <div class=
+            "animate__animated animate__fadeInDown bg-white p-4 rounded-full shadow-lg text-7xl text-primary flex items-center justify-center w-32 h-32">
+            </div>
+          </div>
+          <div class="animate__animated animate__fadeIn">
+            <h1 class=
+            "text-4xl lg:text-5xl font-bold font-serif-sc leading-tight mb-4">
+            人工智能 <span class="highlight-text">深度赋能</span>
+            高校教学与科研工作</h1>
+            <div class="flex items-center">
+              <div class="h-1 w-16 bg-gold rounded-full mr-4">
+              </div>
+              <p class="text-2xl font-sans-sc">高级研修班</p>
+            </div>
+            <div class="flex flex-wrap mt-6 gap-4">
+              <div class=
+              "bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full flex items-center">
+                <span class="text-sm">中国科学院主办</span>
+              </div>
+              <div class=
+              "bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full flex items-center">
+                <span class="text-sm">为期3天</span>
+              </div>
+              <div class=
+              "bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full flex items-center">
+                <span class="text-sm">线上线下同步</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header><!-- 基本信息区域 -->
+    <section id="about" class=
+    "mb-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- 基本信息卡片 -->
+      <div data-aos="fade-right" class="material-card p-6">
+        <h2 class=
+        "text-2xl font-bold text-primary mb-6 flex items-center">
+        基本信息</h2>
+        <ul class="space-y-6">
+          <li class="flex items-start">
+            <div class=
+            "mr-4 mt-1 bg-primary bg-opacity-10 rounded-full w-10 h-10 flex items-center justify-center">
+            </div>
+            <div>
+              <p class="font-medium text-dark text-lg">举办单位</p>
+              <p>中国科学院人才交流开发中心主办</p>
+              <p class="text-sm text-gray-600">
+              北京中科创嘉人力资源咨询有限公司承办</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <div class=
+            "mr-4 mt-1 bg-primary bg-opacity-10 rounded-full w-10 h-10 flex items-center justify-center">
+            </div>
+            <div>
+              <p class="font-medium text-dark text-lg">研修对象</p>
+              <p>各科研院所、企业单位相关业务骨干及各高校老师</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <div class=
+            "mr-4 mt-1 bg-primary bg-opacity-10 rounded-full w-10 h-10 flex items-center justify-center">
+            </div>
+            <div>
+              <p class="font-medium text-dark text-lg">课程学制</p>
+              <p>3天 (理论与实践相结合的密集课程)</p>
+            </div>
+          </li>
+        </ul>
+      </div><!-- 研修目的卡片 -->
+      <div data-aos="fade-up" class="material-card p-6">
+        <h2 class=
+        "text-2xl font-bold text-burgundy mb-6 flex items-center">
+        研修目的</h2>
+        <div class="prose">
+          <p class="mb-4"><span class=
+          "font-bold text-primary">人工智能赋能科研</span>，科学技术改变未来。为推动教育数字转型、智能升级、融合创新，加快建设高质量教育科研体系，特邀<span class="font-bold">中国科学院计算技术研究所专家</span>讲授大模型原理、关键技术、发展历程。</p>
+          <p>
+          通过专业指导，掌握主流大模型应用、微调、RAG和本地部署，以及AIGC多模态应用等内容，实现科研与教学工作的智能化转型。</p>
+        </div>
+        <div class=
+        "mt-6 p-4 bg-primary bg-opacity-5 rounded-lg border-l-4 border-primary">
+          <div class="flex items-center mb-2">
+            <span class="font-medium text- lg">研修亮点</span>
+          </div>
+          <p class="text-sm">理论与实践结合，从入门到实操，一线专家亲授，定制化解决方案</p>
+        </div>
+      </div><!-- 费用与认证卡片 -->
+      <div data-aos="fade-left" class="material-card p-6">
+        <h2 class=
+        "text-2xl font-bold text-burgundy mb-6 flex items-center">
+        费用与认证</h2>
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class=
+            "mr-4 mt-1 bg-gold bg-opacity-10 rounded-full w-10 h-10 flex items-center justify-center">
+            </div>
+            <div>
+              <p class="font-medium text-dark text-lg">培训费用</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                <div>
+                  <p class="text-sm text-gray-600">线下参与：</p>
+                  <div class="flex items-baseline">
+                    <p class="text-2xl font-bold text-primary">2980</p>
+                    <span class="text-sm font-normal ml-1">元/人</span>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">线上参与：</p>
+                  <div class="flex items-baseline">
+                    <p class="text-2xl font-bold text-primary">5400</p>
+                    <span class="text-sm font-normal ml-1">元/三人</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class=
+            "mr-4 mt-1 bg-gold bg-opacity-10 rounded-full w-10 h-10 flex items-center justify-center">
+            </div>
+            <div>
+              <p class="font-medium text-dark text-lg">结业证书</p>
+              <p>完成全部课程后，颁发中国科学院人才交流开发中心认证的结业证书</p>
+              <div class="mt-3 flex">
+                <div class=
+                "glowing-border bg-white p-2 rounded-lg shadow-sm">
+                <img src=
+                "https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&amp;w=2400&amp;auto=format&amp;fit=crop"
+                alt="证书示例" class=
+                "w-full h-32 object-cover rounded"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- 课程内容区域 -->
+    <section id="content" class="mb-20">
+      <div class="text-center mb-12">
+        <h2 class=
+        "text-3xl font-bold text-primary font-serif-sc inline-block relative">
+        <span class="highlight-text">主题内容</span></h2>
+        <div class="h-1 w-24 bg-gold rounded-full mx-auto mt-2">
+          <h2 class=
+          "text-3xl font-bold text-primary font-serif-sc inline-block relative">
+          </h2>
+        </div>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        精心设计的课程体系，理论与实践相结合，助力您快速掌握人工智能大模型技术及应用</p>
+      </div><!-- 课程内容卡片网格 -->
+      <div class=
+      "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 卡片 1: 大模型的缘起与发展 -->
+        <div data-aos="zoom-in-up" data-aos-delay="0" class=
+        "material-card overflow-hidden group">
+          <div class=
+          "h-28 bg-gradient-to-r from-primary to-accent relative overflow-hidden">
+            <div class=
+            "absolute inset-0 flex items-center justify-center">
+            </div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <h3 class="text-white text-xl font-bold">
+              大模型的缘起与发展</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+              <span>大模型时代人工智能的前夜</span></li>
+              <li class="flex items-start">
+              <span>深度强化学习的高光时刻--AlphaGo</span></li>
+              <li class="flex items-start">
+              <span>ChatGPT大模型训练方法</span></li>
+              <li class="flex items-start">
+              <span>大模型关键技术突破</span></li>
+            </ul>
+            <div class=
+            "mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+              <span class="text-sm text-gray-500">基础理论</span>
+              <span class=
+              "bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full">
+              Day 1</span>
+            </div>
+          </div>
+        </div><!-- 卡片 2: 大模型技术实践 -->
+        <div data-aos="zoom-in-up" data-aos-delay="100" class=
+        "material-card overflow-hidden group">
+          <div class=
+          "h-28 bg-gradient-to-r from-primary to-accent relative overflow-hidden">
+            <div class=
+            "absolute inset-0 flex items-center justify-center">
+            </div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <h3 class="text-white text-xl font-bold">大模型技术实践</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+              <span>ChatGPT能力与AIGC实现</span></li>
+              <li class="flex items-start">
+              <span>开源大模型介绍与评价体系</span></li>
+              <li class="flex items-start">
+              <span>大模型公开服务调用方法</span></li>
+              <li class=
+              "flex items-start bg-primary bg-opacity-5 p-2 rounded">
+              <span class="font-medium">【实践环节】大模型公开服务调用</span></li>
+            </ul>
+            <div class=
+            "mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+              <span class="text-sm text-gray-500">实用技术</span>
+              <span class=
+              "bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full">
+              Day 1-2</span>
+            </div>
+          </div>
+        </div><!-- 卡片 3: RAG技术与微调 -->
+        <div data-aos="zoom-in-up" data-aos-delay="200" class=
+        "material-card overflow-hidden group">
+          <div class=
+          "h-28 bg-gradient-to-r from-gold to-amber-400 relative overflow-hidden">
+            <div class=
+            "absolute inset-0 flex items-center justify-center">
+            </div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <h3 class="text-white text-xl font-bold">
+              RAG技术与微调</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+              <span>检索增强生成(RAG)方法与流程</span></li>
+              <li class="flex items-start">
+              <span>RAG框架介绍与优缺点分析</span></li>
+              <li class=
+              "flex items-start bg-gold bg-opacity-5 p-2 rounded">
+              <span class=
+              "font-medium">【实践环节】Langchain本地部署</span></li>
+              <li class="flex items-start">
+              <span>微调和RAG方法的优缺点对比</span></li>
+            </ul>
+            <div class=
+            "mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+              <span class="text-sm text-gray-500">高级应用</span>
+              <span class=
+              "bg-gold bg-opacity-10 text-gold text-xs px-2 py-1 rounded-full">
+              Day 2</span>
+            </div>
+          </div>
+        </div><!-- 卡片 4: 大模型行业应用 -->
+        <div data-aos="zoom-in-up" data-aos-delay="300" class=
+        "material-card overflow-hidden group">
+          <div class=
+          "h-28 bg-gradient-to-r from-burgundy to-primary relative overflow-hidden">
+            <div class=
+            "absolute inset-0 flex items-center justify-center">
+            </div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <h3 class="text-white text-xl font-bold">大模型行业应用</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="grid grid-cols-2 gap-2">
+              <div class=
+              "flex items-center p-2 rounded hover:bg-burgundy hover:bg-opacity-5 transition-colors">
+                <span>推荐系统</span>
+              </div>
+              <div class=
+              "flex items-center p-2 rounded hover:bg-burgundy hover:bg-opacity-5 transition-colors">
+                <span>医学资料检索</span>
+              </div>
+              <div class=
+              "flex items-center p-2 rounded hover:bg-burgundy hover:bg-opacity-5 transition-colors">
+                <span>AI投资管理</span>
+              </div>
+              <div class=
+              "flex items-center p-2 rounded hover:bg-burgundy hover:bg-opacity-5 transition-colors">
+                <span>金融核查平台</span>
+              </div>
+              <div class=
+              "flex items-center p-2 rounded hover:bg-burgundy hover:bg-opacity-5 transition-colors">
+                <span>电力设备运检</span>
+              </div>
+              <div class=
+              "flex items-center p-2 rounded hover:bg-burgundy hover:bg-opacity-5 transition-colors">
+                <span>软件开发系统</span>
+              </div>
+              <div class=
+              "flex items-center p-2 rounded hover:bg-burgundy hover:bg-opacity-5 transition-colors">
+                <span>组卷和判卷系统</span>
+              </div>
+              <div class=
+              "flex items-center p-2 rounded hover:bg-burgundy hover:bg-opacity-5 transition-colors">
+                <span>智慧办公</span>
+              </div>
+            </div>
+            <div class=
+            "mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+              <span class="text-sm text-gray-500">应用场景</span>
+              <span class=
+              "bg-burgundy bg-opacity-10 text-burgundy text-xs px-2 py-1 rounded-full">
+              Day 3</span>
+            </div>
+          </div>
+        </div><!-- 卡片 5: 大模型部署与实现 -->
+        <div data-aos="zoom-in-up" data-aos-delay="400" class=
+        "material-card overflow-hidden group">
+          <div class=
+          "h-28 bg-gradient-to-r from-secondary to-burgundy relative overflow-hidden">
+            <div class=
+            "absolute inset-0 flex items-center justify-center">
+            </div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <h3 class="text-white text-xl font-bold">
+              大模型部署与实现</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+              <span>大模型参数量计算方法</span></li>
+              <li class="flex items-start">
+              <span>参数量和GPU的适配关系</span></li>
+              <li class="flex items-start">
+              <span>常用推理框架vLLM基本原理</span></li>
+              <li class="flex items-start">
+              <span>vLLM的进阶功能与使用方法</span></li>
+            </ul>
+            <div class=
+            "mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+              <span class="text-sm text-gray-500">系统部署</span>
+              <span class=
+              "bg-secondary bg-opacity-10 text-secondary text-xs px-2 py-1 rounded-full">
+              Day 3</span>
+            </div>
+          </div>
+        </div><!-- 卡片 6: 技术趋势与前景 -->
+        <div data-aos="zoom-in-up" data-aos-delay="500" class=
+        "material-card overflow-hidden group">
+          <div class=
+          "h-28 bg-gradient-to-r from-accent to-primary relative overflow-hidden">
+            <div class=
+            "absolute inset-0 flex items-center justify-center">
+            </div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <h3 class="text-white text-xl font-bold">技术趋势与前景</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+              <span>ChatGPT的缺陷与优化</span></li>
+              <li class="flex items-start">
+              <span>大模型的研究方向</span></li>
+              <li class="flex items-start">
+              <span>大模型的产业发展趋势</span></li>
+              <li class="flex items-start">
+              <span>基于大模型的效率工具介绍</span></li>
+            </ul>
+            <div class=
+            "mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+              <span class="text-sm text-gray-500">未来展望</span>
+              <span class=
+              "bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-full">
+              Day 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- 技术实践区域 -->
+    <section id="technology" class="mb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-5">
+          <h2 data-aos="fade-right" class=
+          "text-3xl font-bold text-primary font-serif-sc mb-6">
+          技术实践环节</h2>
+          <div data-aos="fade-up" class="prose max-w-none">
+            <p class="mb-4">
+            本次研修班不仅包含理论知识讲解，更设置了丰富的实践环节，让学员能够亲身体验和操作大模型应用。</p>
+            <p class="mb-4">通过实际操作，学员将学习如何：</p>
+            <ul class="space-y-3">
+              <li class="flex items-start"><span class=
+              "inline-flex items-center justify-center bg-primary text-white w-6 h-6 rounded-full mr-2 flex-shrink-0">
+              1</span> <span>使用API接口调用大模型服务，实现智能对话系统</span></li>
+              <li class="flex items-start"><span class=
+              "inline-flex items-center justify-center bg-primary text-white w-6 h-6 rounded-full mr-2 flex-shrink-0">
+              2</span>
+              <span>基于Langchain框架搭建本地知识库，实现专业领域内的精准问答</span></li>
+              <li class="flex items-start"><span class=
+              "inline-flex items-center justify-center bg-primary text-white w-6 h-6 rounded-full mr-2 flex-shrink-0">
+              3</span> <span>使用最先进的微调技术，针对特定任务优化大模型表现</span></li>
+              <li class="flex items-start"><span class=
+              "inline-flex items-center justify-center bg-primary text-white w-6 h-6 rounded-full mr-2 flex-shrink-0">
+              4</span> <span>在有限硬件资源下，部署和优化开源大模型</span></li>
+            </ul>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" class=
+          "mt-8">
+            <div class=
+            "p-5 bg-primary bg-opacity-5 rounded-lg border-l-4 border-primary">
+              <h3 class="text-lg font-bold text-primary mb-2">
+              讲师阵容</h3>
+              <p>
+              中国科学院计算技术研究所资深研究员和工程师，具有丰富的大模型研发和应用经验，能够针对不同行业需求提供专业解决方案。</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div data-aos="fade-left" class=
+          "relative rounded-xl overflow-hidden shadow-material-hover">
+            <img src=
+            "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
+            alt="AI技术实践" class="w-full h-full object-cover">
+            <div class=
+            "absolute inset-0 bg-gradient-to-t from-burgundy to-transparent opacity-70">
+            </div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-2xl font-bold mb-2">实战派教学，理论结合实践</h3>
+              <p class="text-white text-opacity-90">
+              每个技术模块配备实际操作环节，确保学员掌握应用能力</p>
+            </div>
+          </div>
+          <div data-aos="fade-up" class=
+          "mt-8 grid grid-cols-2 gap-6">
+            <div class=
+            "material-card p-5 relative overflow-hidden">
+              <div class=
+              "absolute -right-4 -top-4 w-20 h-20 bg-primary bg-opacity-10 rounded-full">
+              </div>
+              <h3 class=
+              "text-lg font-medium text-primary mb-3 relative z-10">
+              硬件要求</h3>
+              <ul class="space-y-2 text-sm relative z-10">
+                <li class="flex items-start">
+                <span>自备笔记本电脑(Windows/Mac)</span></li>
+                <li class="flex items-start">
+                <span>稳定的网络连接</span></li>
+                <li class="flex items-start">
+                <span>20GB以上可用存储空间</span></li>
+              </ul>
+            </div>
+            <div class=
+            "material-card p-5 relative overflow-hidden">
+              <div class=
+              "absolute -right-4 -top-4 w-20 h-20 bg-gold bg-opacity-10 rounded-full">
+              </div>
+              <h3 class=
+              "text-lg font-medium text-gold mb-3 relative z-10">
+              软件环境</h3>
+              <ul class="space-y-2 text-sm relative z-10">
+                <li class="flex items-start"><span>Python
+                3.8+</span></li>
+                <li class="flex items-start">
+                <span>Git版本控制</span></li>
+                <li class="flex items-start"><span>预安装Jupyter
+                Notebook</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- 报名信息区域 -->
+    <section id="footer" class="pt-10 skewed-card">
+      <div data-aos="fade-up" class=
+      "wave-bg bg-primary bg-opacity-95 text-white p-8 rounded-xl shadow-material-hover relative overflow-hidden">
+        <div class="absolute top-0 right-0">
+          <svg viewbox="0 0 200 200" xmlns=
+          "http://www.w3.org/2000/svg" class=
+          "w-40 h-40 text-white opacity-10">
+          <path fill="currentColor" d=
+          "M40.8,-68.3C51.4,-60.2,57.4,-46,65.3,-32.3C73.2,-18.7,83,-5.5,82.9,7.5C82.8,20.5,72.8,33.2,61.2,42.4C49.7,51.7,36.5,57.4,22.9,63.5C9.2,69.6,-4.9,76,-18,74.8C-31.1,73.6,-43.2,64.8,-51.9,53.7C-60.5,42.5,-65.7,29,-68.8,15.2C-71.9,1.4,-72.8,-12.6,-69.4,-26.1C-66,-39.5,-58.2,-52.3,-46.7,-60C-35.2,-67.7,-19.9,-70.2,-2.8,-66C14.3,-61.9,30.2,-76.4,40.8,-68.3Z"
+          transform="translate(100 100)"></path></svg>
+        </div>
+        <div class=
+        "grid grid-cols-1 md:grid-cols-12 gap-8 relative z-10">
+          <div class="md:col-span-8">
+            <div class="flex items-center mb-6">
+              <div class="text-4xl mr-4"></div>
+              <div>
+                <h2 class="text-2xl font-bold">第五期 | 8月底举办</h2>
+                <div class="h-1 w-16 bg-gold rounded-full mt-2">
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class=
+                "text-lg font-medium mb-2 flex items-center">
+                报名说明</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                  <span>培训费包含教材、证书、午餐及茶点</span></li>
+                  <li class="flex items-start">
+                  <span>交通及住宿费用自理</span></li>
+                  <li class="flex items-start">
+                  <span>统一安排住宿，费用优惠</span></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class=
+                "text-lg font-medium mb-2 flex items-center">
+                招生对象</h3>
+                <p class="mb-4">面向各科研院所、企业单位相关业务骨干及各高校老师，尤其适合：</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class=
+                  "bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
+                  信息技术人员</span> <span class=
+                  "bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
+                  教研人员</span> <span class=
+                  "bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
+                  技术管理者</span> <span class=
+                  "bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
+                  科研工作者</span>
+                </div>
+              </div>
+            </div>
+            <div class=
+            "mt-8 p-4 bg-white bg-opacity-10 rounded-lg">
+              <div class="flex items-center mb-2">
+                <h3 class="text-lg font-medium">特别说明</h3>
+              </div>
+              <p class="text-sm">
+              本课程偏向大模型技术实际场景应用和上手部署，由北京大学智能学院主办，燕园玮智（北京）教育科技有限公司承办。线上线下同步直播，确保不同地区学员均能参与学习。</p>
+            </div>
+          </div>
+          <div class="md:col-span-4">
+            <div class="bg-white p-6 rounded-lg text-dark">
+              <h3 class="text-xl font-bold text-primary mb-4">
+              立即报名</h3>
+              <form>
+                <div class="mb-4">
+                  <label class=
+                  "block text-sm font-medium mb-1">姓名</label>
+                  <input type="text" class=
+                  "w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="请输入您的姓名">
+                </div>
+                <div class="mb-4">
+                  <label class=
+                  "block text-sm font-medium mb-1">单位</label>
+                  <input type="text" class=
+                  "w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="请输入您的单位">
+                </div>
+                <div class="mb-4">
+                  <label class=
+                  "block text-sm font-medium mb-1">联系电话</label>
+                  <input type="tel" class=
+                  "w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="请输入您的联系电话">
+                </div>
+                <div class="mb-4">
+                  <label class=
+                  "block text-sm font-medium mb-1">选择参与方式</label>
+                  <div class="flex gap-4">
+                    <label class="flex items-center"><input type=
+                    "radio" name="participation" class=
+                    "text-primary focus:ring-primary mr-2">
+                    <span>线下</span></label> <label class=
+                    "flex items-center"><input type="radio" name=
+                    "participation" class=
+                    "text-primary focus:ring-primary mr-2">
+                    <span>线上</span></label>
+                  </div>
+                </div><button type="submit" class=
+                "w-full py-2 px-4 bg-primary text-white rounded-md hover:bg-burgundy transition-colors">提交报名</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!-- 底部信息栏 -->
+      <footer class="mt-8 text-center text-sm text-gray-600">
+        <p>© 2023 北京大学智能学院 | 燕园玮智（北京）教育科技公司</p>
+        <div class="mt-2 flex items-center justify-center">
+          <span class="mr-2">联系电话：010-12345678</span>
+          <span>|</span> <span class=
+          "ml-2">邮箱：caicaizi@yywize.edu.cn</span>
+        </div>
+      </footer>
+    </section>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+  <script>
+
+    // 初始化AOS
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+    
+    // 页面加载完成后隐藏加载动画
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loader = document.getElementById('loaderContainer');
+        loader.style.opacity = '0';
+        setTimeout(function() {
+          loader.style.display = 'none';
+        }, 500);
+      }, 1500); // 1.5秒后开始淡出
+    });
+    
+    // 滚动进度条
+    window.addEventListener('scroll', function() {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollProgress = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scrollProgress').style.width = scrollProgress + '%';
+      
+      // 更新导航指示器
+      const sections = ['header', 'about', 'content', 'technology', 'footer'];
+      const navDots = document.querySelectorAll('.nav-dot');
+      
+      sections.forEach((sectionId, index) => {
+        const section = document.getElementById(sectionId);
+        const rect = section.getBoundingClientRect();
+        
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          navDots.forEach(dot => dot.classList.remove('active'));
+          navDots[index].classList.add('active');
+        }
+      });
+    });
+    
+    // 导航点击事件
+    document.querySelectorAll('.nav-dot').forEach(dot => {
+      dot.addEventListener('click', function() {
+        const sectionId = this.getAttribute('data-section');
+        document.getElementById(sectionId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // 菜单按钮点击事件
+    document.getElementById('menuButton').addEventListener('click', function() {
+      const menuItems = document.getElementById('menuItems');
+      menuItems.classList.toggle('active');
+    });
+    
+    // 菜单链接点击事件
+    document.querySelectorAll('.menu-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('menuItems').classList.remove('active');
+      });
+    });
+    
+    // 点击其他区域关闭菜单
+    document.addEventListener('click', function(event) {
+      const menuButton = document.getElementById('menuButton');
+      const menuItems = document.getElementById('menuItems');
+      
+      if (!menuButton.contains(event.target) && !menuItems.contains(event.target)) {
+        menuItems.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
