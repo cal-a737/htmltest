@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一城「重返盛明·第二人生」文化康养旅居项目 - 商业计划书</title>
+    <style>
+        /* PDF优化的基础样式 */
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            font-size: 12px;
+        }
+
+        /* 杂志风格布局 */
+        .magazine-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* 封面设计 */
+        .cover-page {
+            height: 297mm;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            page-break-after: always;
+            padding: 40px;
+        }
+
+        .cover-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .cover-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cover-tagline {
+            font-size: 1.2rem;
+            background: rgba(231, 76, 60, 0.8);
+            padding: 15px 30px;
+            border-radius: 25px;
+            margin-bottom: 40px;
+        }
+
+        .cover-info {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* 目录页 */
+        .toc-page {
+            page-break-before: always;
+            page-break-after: always;
+            padding: 40px;
+            min-height: 250mm;
+        }
+
+        .toc-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 15px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dotted #ccc;
+            font-size: 1.1rem;
+        }
+
+        .toc-item:hover {
+            background: #f8f9fa;
+        }
+
+        .toc-number {
+            background: #e74c3c;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* 章节页面 */
+        .chapter {
+            page-break-before: always;
+            padding: 30px;
+            min-height: 250mm;
+        }
+
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 20px;
+        }
+
+        .chapter-number {
+            font-size: 1.2rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .chapter-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* 多栏布局 */
+        .two-column {
+            column-count: 2;
+            column-gap: 30px;
+            column-rule: 1px solid #eee;
+            text-align: justify;
+        }
+
+        .three-column {
+            column-count: 3;
+            column-gap: 20px;
+            column-rule: 1px solid #eee;
+        }
+
+        /* 内容区块 */
+        .content-block {
+            margin-bottom: 30px;
+            break-inside: avoid;
+        }
+
+        .content-block h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 15px;
+        }
+
+        .content-block h4 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin: 15px 0 10px 0;
+            font-weight: bold;
+        }
+
+        .content-block p {
+            margin-bottom: 12px;
+            text-indent: 2em;
+        }
+
+        /* 特色框 */
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            break-inside: avoid;
+        }
+
+        .highlight-box h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* 数据展示 */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .data-item {
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            break-inside: avoid;
+        }
+
+        .data-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+
+        .data-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        /* 表格样式 */
+        .magazine-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            break-inside: avoid;
+        }
+
+        .magazine-table th,
+        .magazine-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+
+        .magazine-table th {
+            background: #2c3e50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .magazine-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* 图表容器 */
+        .chart-container {
+            text-align: center;
+            margin: 25px 0;
+            break-inside: avoid;
+        }
+
+        .chart-title {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* 列表样式 */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .styled-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .styled-list li:before {
+            content: "▶";
+            color: #e74c3c;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* 引用样式 */
+        .quote-box {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 25px 0;
+            break-inside: avoid;
+        }
+
+        .quote-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* 页脚 */
+        .page-footer {
+            position: fixed;
+            bottom: 1cm;
+            left: 2cm;
+            right: 2cm;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        /* 打印优化 */
+        @media print {
+            body {
+                font-size: 11px;
+            }
+            
+            .chapter {
+                page-break-before: always;
+            }
+            
+            .content-block,
+            .highlight-box,
+            .data-item,
+            .magazine-table,
+            .chart-container {
+                break-inside: avoid;
+            }
+        }
+
+        /* SVG图表样式 */
+        .svg-chart {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+        }
+
+        /* 时间线样式 */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: #e74c3c;
+            border-radius: 50%;
+        }
+
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: 14px;
+            top: 15px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #eee;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #e74c3c;
+            break-inside: avoid;
+        }
+
+        .info-card h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-card p {
+            font-size: 0.9rem;
+            color: #555;
+            text-indent: 0;
+        }
+
+        /* 风险卡片样式 */
+        .risk-card {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            break-inside: avoid;
+        }
+
+        .risk-header {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+        }
+
+        .risk-content {
+            padding: 20px;
+        }
+
+        .risk-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .risk-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .risk-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .risk-description {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .risk-solution {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+            font-size: 0.9rem;
+        }
+
+        /* 财务表格样式 */
+        .financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        .financial-table th,
+        .financial-table td {
+            padding: 8px 12px;
+            text-align: right;
+            border-bottom: 1px solid #eee;
+        }
+
+        .financial-table th {
+            background: #2c3e50;
+            color: white;
+            text-align: left;
+        }
+
+        .financial-table .category {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .financial-table .total {
+            background: #f8f9fa;
+            font-weight: bold;
+        }
+
+        /* 利润高亮 */
+        .profit-highlight {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .profit-rate {
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="magazine-container">
+        <!-- 封面页 -->
+        <div class="cover-page">
+            <div class="cover-title">第一城<br>「重返盛明·第二人生」</div>
+            <div class="cover-subtitle">文化康养旅居项目</div>
+            <div class="cover-tagline">来第一城，着一身风华，过第二人生！</div>
+            
+            <svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="coverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:#f39c12;stop-opacity:0.8" />
+                    </linearGradient>
+                </defs>
+                <rect x="50" y="50" width="200" height="50" fill="url(#coverGrad)" rx="25"/>
+                <text x="150" y="80" text-anchor="middle" font-size="16" fill="white" font-weight="bold">商业计划书</text>
+            </svg>
+
+            <div class="cover-info">
+                <div>燕园玮智（北京）科技有限公司</div>
+                <div>2025年7月</div>
+            </div>
+        </div>
+
+        <!-- 目录页 -->
+        <div class="toc-page">
+            <h1 class="toc-title">目录</h1>
+            <ul class="toc-list">
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">1</div>
+                        <span>项目概述</span>
+                    </div>
+                    <span>3</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">2</div>
+                        <span>愿景与使命</span>
+                    </div>
+                    <span>4</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">3</div>
+                        <span>市场分析</span>
+                    </div>
+                    <span>5</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">4</div>
+                        <span>项目定位与竞争力</span>
+                    </div>
+                    <span>7</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">5</div>
+                        <span>产品与服务体系</span>
+                    </div>
+                    <span>9</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">6</div>
+                        <span>运营与管理</span>
+                    </div>
+                    <span>11</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">7</div>
+                        <span>品牌营销与推广</span>
+                    </div>
+                    <span>13</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">8</div>
+                        <span>商业模式</span>
+                    </div>
+                    <span>15</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">9</div>
+                        <span>财务分析</span>
+                    </div>
+                    <span>17</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">10</div>
+                        <span>风险分析与规避</span>
+                    </div>
+                    <span>19</span>
+                </li>
+                <li class="toc-item">
+                    <div style="display: flex; align-items: center;">
+                        <div class="toc-number">11</div>
+                        <span>项目总结</span>
+                    </div>
+                    <span>21</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 第一章：项目概述 -->
+        <div class="chapter" style="page-break-after: always;">
+            <div class="chapter-header">
+                <div class="chapter-number">第一章</div>
+                <h1 class="chapter-title">项目概述</h1>
+                <div class="chapter-subtitle">Project Overview</div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>项目背景</h3>
+                    <p>随着中国人口老龄化进程加速，银发经济迎来黄金发展期。截至2023年，我国60岁以上人口已超过3亿，预计到2030年银发经济市场规模将接近15万亿元。在这一背景下，传统的"候鸟式"养老旅游已无法满足新一代活力老人的精神文化需求。</p>
+                    
+                    <p>第一城「重返盛明·第二人生」项目应运而生，它是燕园玮智（北京）科技有限公司与中信国安第一城深度合作的创新文化康养项目。项目依托第一城独特的明清古建筑群，为50-70岁的活力老人打造沉浸式的文化康养体验。</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>项目核心亮点</h4>
+                    <ul class="styled-list">
+                        <li>国内首创"明文化穿越"主题康养项目</li>
+                        <li>10天1500元的震撼性价比</li>
+                        <li>北大校企品牌背书，专业运营团队</li>
+                        <li>独特的第一城古建筑群场景</li>
+                        <li>文化+康养+社交三位一体模式</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h3>项目定位</h3>
+                    <p>本项目定位为"老年主题乐园"，通过"文化穿越"的创新形式，让长者在角色扮演中重拾青春活力，在文化学习中获得精神满足，在社群互动中建立深厚友谊，在健康管理中延缓衰老进程。</p>
+                    
+                    <p>我们不仅仅提供一次旅行体验，更是为活力长者开启一段"第二人生"的精彩旅程。通过系统化的服务设计和专业化的运营管理，项目致力于成为中国文化康养旅居行业的标杆和引领者。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>项目基地</h3>
+                    
+                    <h4>项目区位</h4>
+                    <p>国安第一城位于河北省香河县安平经济技术开发区，地处京、津、冀三地交界的黄金地段。国安第一城位于京津冀协同发展核心区的河北香河，项目距北京52公里，天津70公里，占地3320亩，建筑面积54万平方米。</p>
+                    
+                    <div class="chart-container">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/position-gK7X2PCnIw30qMwJEl0KgY4EEwHrHQ.png" alt="国安第一城地理位置图" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    
+                    <div class="chart-container">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/view.png-SMWW6j5ozdmxLeLOEDmMFoC3l1xtJM.jpeg" alt="国安第一城夜景全貌" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="two-column">
+                <div class="content-block">
+    
+    <h4>大明幻境——京津冀大型全景沉浸式国潮主题乐园</h4>
+    <p>国安第一城由中信国安实业集团有限公司投资建设，以明清老北京都城为蓝本，融合"内九外七"的城垣格局、圆明六景等历史符号，融合古今建筑精髓与中华文化脉络，构建起集会议会展、文旅体验、休闲、度假于一体的综合性文化地标.</p>
+    
+    <div class="chart-container">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/city-X2UyeaumOPLuq7JaFEwgUhpjOAPOcA.png" alt="国安第一城平面图" style="width: 100%; max-width: 700px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+    
+    <div class="three-column" style="margin: 20px 0;">
+        <p><strong>沉浸演艺：</strong>120场</p>
+        <p><strong>主题剧场：</strong>6个</p>
+        <p><strong>幻境夜游：</strong>1个</p>
+        <p><strong>主题酒店：</strong>3个</p>
+        <p><strong>会议空间：</strong>47个</p>
+        <p><strong>数字影院：</strong>2个</p>
+        <p><strong>影视大棚：</strong>6个</p>
+        <p><strong>科技农场：</strong>1个</p>
+        <p><strong>市集商街：</strong>3个</p>
+        <p><strong>萌宠乐园：</strong>1个</p>
+        <p><strong>博物馆：</strong>5个</p>
+    </div>
+    
+    <div class="chart-container">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/history.png-6FgCMxPBoLmhJhl2xg8IFS4k9yXSbi.jpeg" alt="国安第一城发展历程" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+    
+    <h4>福安宫酒店</h4>
+    <p>位于第一城东区圆明园景区，占地22970平方米（合34.4551亩），建筑面积141328.45平方米。建筑总高63.28米。东西南北对称，四平八稳，中间镂空，成"回"字型。功能包括客房、餐饮、会议室、顶楼图书馆、康体设施等。酒店共十七层，地下一层，地上十六层。拥有客房1427间（标准间1213间、单人间67间、套间47间、行政间100间）。</p>
+    
+    <div class="chart-container">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/room.png-Ctgg2gdMCgFSW7jVOZ0M7SPlHrA7Xn.jpeg" alt="酒店房间分布表" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+    
+    <div class="chart-container">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/room2-8lSby4pYxDRNpzbSPhHOTFNi7GBqNM.png" alt="酒店客房实景" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+</div>
+
+            <div class="data-grid">
+                <div class="data-item">
+                    <div class="data-value">3亿+</div>
+                    <div class="data-label">60岁以上人口</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">15万亿</div>
+                    <div class="data-label">2030年银发经济规模</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">1500元</div>
+                    <div class="data-label">10天体验营价格</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">100%</div>
+                    <div class="data-label">市场独创性</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二章：愿景与使命 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第二章</div>
+                <h1 class="chapter-title">愿景与使命</h1>
+                <div class="chapter-subtitle">Vision & Mission</div>
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-text">"让每一位长者都能在文化的滋养中，重新定义自己的人生价值"</div>
+                <div class="quote-author">— 项目愿景</div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>项目愿景</h3>
+                    <p>成为中国领先的文化康养旅居品牌，为活力老人提供有温度、有深度、有价值的"第二人生"体验，让传统文化在新时代焕发生机，让银发群体在文化传承中找到人生新的意义和价值。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>项目使命</h3>
+                    <p>通过创新的"文化穿越"模式，为中国3亿银发群体提供集文化体验、健康颐养、社交娱乐、价值实现于一体的高品质服务，让每一位参与者都能在历史文化的浸润中获得身心的双重滋养。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>核心价值观</h3>
+                    <ul class="styled-list">
+                        <li><strong>文化传承：</strong>让传统文化在体验中传承，在传承中创新</li>
+                        <li><strong>尊重关爱：</strong>以专业和温暖对待每一位长者</li>
+                        <li><strong>品质至上：</strong>追求服务的每一个细节都精益求精</li>
+                        <li><strong>创新引领：</strong>持续探索康养服务的新模式新体验</li>
+                        <li><strong>社会责任：</strong>为构建老有所乐的和谐社会贡献力量</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h3>发展目标</h3>
+                    <p><strong>短期目标（1年内）：</strong>在第一城成功运营首个项目，服务1000+长者，建立标准化运营体系，实现盈亏平衡。</p>
+                    
+                    <p><strong>中期目标（3年内）：</strong>在京津冀地区复制推广3-5个项目点，服务10000+长者，成为区域知名的文化康养品牌。</p>
+                    
+                    <p><strong>长期目标（5年内）：</strong>在全国主要城市布局20+项目点，服务100000+长者，成为中国文化康养旅居行业的领军品牌。</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">发展路径图</div>
+                <svg width="600" height="200" viewBox="0 0 600 200" class="svg-chart">
+                    <defs>
+                        <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#f39c12;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <path d="M50 150 Q200 50 350 100 Q500 150 550 50" stroke="url(#pathGrad)" stroke-width="4" fill="none"/>
+                    
+                    <circle cx="50" cy="150" r="8" fill="#e74c3c"/>
+                    <text x="50" y="180" text-anchor="middle" font-size="12" fill="#2c3e50">起步期</text>
+                    
+                    <circle cx="300" cy="75" r="8" fill="#f39c12"/>
+                    <text x="300" y="105" text-anchor="middle" font-size="12" fill="#2c3e50">发展期</text>
+                    
+                    <circle cx="550" cy="50" r="8" fill="#27ae60"/>
+                    <text x="550" y="80" text-anchor="middle" font-size="12" fill="#2c3e50">成熟期</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- 第三章：市场分析 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第三章</div>
+                <h1 class="chapter-title">宏观环境与市场分析</h1>
+                <div class="chapter-subtitle">Market Analysis</div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>银发经济市场概况</h4>
+                <p>中国银发经济正迎来前所未有的发展机遇。根据国家统计局数据，2023年我国60岁以上人口已超过3亿，占总人口的21.1%。预计到2030年，银发经济市场规模将接近15万亿元，成为推动经济增长的重要引擎。</p>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>PEST宏观环境分析</h3>
+                    
+                    <h4>政策环境（Political）</h4>
+                    <p>国家层面高度重视银发经济发展。《"健康中国2030"规划纲要》、《关于发展银发经济增进老年人福祉的意见》等政策文件明确支持康养产业发展。京津冀协同发展战略深化，为区域文旅与养老资源整合提供了政策支撑。</p>
+                    
+                    <h4>经济环境（Economic）</h4>
+                    <p>银发经济市场规模巨大，老年群体消费能力显著提升。消费结构从生存型向发展型、享受型转变，可支配收入增加，愿意为健康、快乐和高品质体验付费。这为文化康养项目提供了坚实的经济基础。</p>
+                    
+                    <h4>社会环境（Social）</h4>
+                    <p>人口老龄化加剧催生"活力老人"群体壮大。新一代老年人教育水平更高，追求有品质、有尊严、有乐趣的晚年生活。精神文化需求日益凸显，成为消费新热点。</p>
+                    
+                    <h4>技术环境（Technological）</h4>
+                    <p>移动互联网、短视频、直播等技术在老年群体中快速普及，为项目营销、社群运营和用户服务提供了高效工具。智能健康监测设备的应用，进一步提升了康养服务的效率和质量。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>市场痛点分析</h3>
+                    
+                    <div class="info-card">
+                        <h4>产品同质化严重</h4>
+                        <p>现有市场多为"候鸟式"观光或单一农家乐模式，缺乏深度文化内涵和鲜明主题特色。</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>价格两极分化</h4>
+                        <p>高端产品费用高昂，普通产品品质堪忧，缺乏高性价比的中端产品选择。</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>精神需求被忽视</h4>
+                        <p>重"养身"轻"养心"，缺乏社交互动和价值实现的场景设计。</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>服务缺乏规范</h4>
+                        <p>市场不规范，服务质量参差不齐，缺乏专业化的服务标准。</p>
+                    </div>
+                </div>
+            </div>
+
+            <table class="magazine-table">
+                <thead>
+                    <tr>
+                        <th>市场痛点</th>
+                        <th>本项目解决方案</th>
+                        <th>竞争优势</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>产品同质化严重</td>
+                        <td>首创"明文化穿越"沉浸式主题</td>
+                        <td>独一无二的文化体验</td>
+                    </tr>
+                    <tr>
+                        <td>价格两极分化</td>
+                        <td>10天1500元震撼低价</td>
+                        <td>高性价比快速建立规模</td>
+                    </tr>
+                    <tr>
+                        <td>精神需求被忽视</td>
+                        <td>角色扮演+团队竞赛+成果展示</td>
+                        <td>满足社交和自我实现需求</td>
+                    </tr>
+                    <tr>
+                        <td>服务缺乏规范</td>
+                        <td>专业运营体系+北大品牌背书</td>
+                        <td>标准化专业服务</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 第四章：项目定位与竞争力 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第四章</div>
+                <h1 class="chapter-title">项目定位与核心竞争力</h1>
+                <div class="chapter-subtitle">Positioning & Competitiveness</div>
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-text">"来第一城，着一身风华，过第二人生！"</div>
+                <div class="quote-author">— 项目独特价值主张</div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>SWOT分析</h3>
+                    
+                    <h4>优势（Strengths）</h4>
+                    <ul class="styled-list">
+                        <li>独特区位与硬件：第一城独一无二的古建群，为"文化穿越"提供绝佳物理场景</li>
+                        <li>强强联合：中信国安品牌背书 + 燕园玮智专业康养运营</li>
+                        <li>创新产品模式："文化+康养+社交"三位一体，市场稀缺性强</li>
+                        <li>北大校企背景：具备高度的公信力和品牌号召力</li>
+                    </ul>
+                    
+                    <h4>劣势（Weaknesses）</h4>
+                    <ul class="styled-list">
+                        <li>初期运营磨合：新项目、新团队、新模式，需要时间磨合</li>
+                        <li>资产模式较重：租赁模式带来固定成本压力</li>
+                    </ul>
+                    
+                    <h4>机会（Opportunities）</h4>
+                    <ul class="styled-list">
+                        <li>蓝海市场：精神文化康养需求旺盛，市场供给严重不足</li>
+                        <li>政策红利：国家大力扶持银发经济和文旅融合</li>
+                        <li>消费升级：活力老人愿意为高品质体验付费</li>
+                        <li>区域协同：京津冀一体化，便于吸引北京核心客源</li>
+                    </ul>
+                    
+                    <h4>威胁（Threats）</h4>
+                    <ul class="styled-list">
+                        <li>市场模仿者：模式跑通后，可能出现模仿者和价格战</li>
+                        <li>宏观经济波动：经济下行可能影响非必需消费支出</li>
+                        <li>安全与健康风险：老年群体的健康和安全问题是运营红线</li>
+                        <li>口碑风险：负面口碑在老年社群中传播速度快</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h3>目标客群画像</h3>
+                    
+                    <div class="highlight-box">
+                        <h4>典型用户：张建国（62岁）</h4>
+                        <p><strong>身份背景：</strong>北京某中学退休历史教师，老伴是退休会计，独生子已成家立业。</p>
+                        <p><strong>经济状况：</strong>家庭月退休金合计1.5万元，有一定积蓄，经济相对宽裕。</p>
+                        <p><strong>健康状况：</strong>身体硬朗，有轻微高血压，注重日常保健和健康管理。</p>
+                        <p><strong>生活状态：</strong>退休生活略感空虚，渴望找到新的价值感和社交圈。</p>
+                        <p><strong>核心需求：</strong>求知（继续学习）、求趣（新奇体验）、求友（结交朋友）、求健（调养身体）、求值（获得认可）。</p>
+                    </div>
+                    
+                    <h3>独特价值主张</h3>
+                    <p>我们不只是提供一次旅行或一个住处，而是为活力长者打造一个<strong>可穿越、可扮演、可学习、可社交的"老年主题乐园"</strong>。在这里，您将体验一次"时空穿越"，开启一段"第二人生"，收获一个"健康身心"，融入一个"温暖社群"。</p>
+                </div>
+            </div>
+
+            <div class="card-grid">
+                <div class="info-card">
+                    <h4>文化穿越体验</h4>
+                    <p>身着明制汉服，扮演历史角色，在真实古建筑中体验明代生活</p>
+                </div>
+                <div class="info-card">
+                    <h4>健康颐养服务</h4>
+                    <p>太极晨练、中医理疗、营养膳食、健康监测全方位呵护</p>
+                </div>
+                <div class="info-card">
+                    <h4>社交互动平台</h4>
+                    <p>志趣相投的同龄人，丰富的团体活动，温暖的社群氛围</p>
+                </div>
+                <div class="info-card">
+                    <h4>价值实现舞台</h4>
+                    <p>才艺展示、经验分享、成果汇演，让每个人都成为主角</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第五章：产品与服务体系 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第五章</div>
+                <h1 class="chapter-title">产品与服务体系</h1>
+                <div class="chapter-subtitle">Products & Services</div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>「重返盛明·第二人生」十日文化康养营</h4>
+                <p>以10天为一个完整周期，通过"入梦·初识盛明"、"风华·雅集百业"、"颐养·动静相宜"、"归梦·载誉而归"四个阶段，为参与者提供完整的文化穿越体验。</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Day 1-2：入梦·初识盛明</h4>
+                    <p>欢迎礼（接风洗尘）、角色选择与授牌（如文人、匠人、商贾）、明制汉服换装、开营仪式、破冰游戏、熟悉环境（京城巡游）</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Day 3-5：风华·雅集百业</h4>
+                    <p><strong>文化研学：</strong>国子监讲座、书法/国画体验<br>
+                    <strong>非遗体验：</strong>学习制作传统手工艺（如宫灯、剪纸）<br>
+                    <strong>生活体验：</strong>"市井"赶集、品尝明代特色小吃</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Day 6-8：颐养·动静相宜</h4>
+                    <p><strong>健康颐养：</strong>太极晨练、八段锦、中医健康讲座、艾灸/推拿体验<br>
+                    <strong>休闲娱乐：</strong>棋牌会友、垂钓、园林漫步、主题电影放映</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Day 9-10：归梦·载誉而归</h4>
+                    <p><strong>成果展示：</strong>才艺大赛（如诗词朗诵、书法作品展）、"结业大戏"排练与汇演<br>
+                    <strong>告别盛典：</strong>颁发"荣誉居民"证书、分享会、合影留念、建立线上社群</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>产品矩阵</h3>
+                    
+                    <div class="info-card">
+                        <h4>引流产品：¥1,500（10天体验营）</h4>
+                        <ul class="styled-list">
+                            <li>基础文化体验活动</li>
+                            <li>标准住宿与餐饮</li>
+                            <li>健康管家服务</li>
+                            <li>社群互动活动</li>
+                            <li>纪念品与证书</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>进阶产品：¥2,000（15天深度营）</h4>
+                        <ul class="styled-list">
+                            <li>深度文化研学课程</li>
+                            <li>定制化体验项目</li>
+                            <li>周边景点游览</li>
+                            <li>专属健康顾问</li>
+                            <li>个人作品集制作</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>长居产品：¥3,000+（月/季/年）</h4>
+                        <ul class="styled-list">
+                            <li>旅居会员特权</li>
+                            <li>更优惠价格体系</li>
+                            <li>自主生活空间</li>
+                            <li>VIP专属服务</li>
+                            <li>社群核心成员</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>专业服务体系</h3>
+                    
+                    <h4>健康管家服务</h4>
+                    <p>入住建档、日常监测、专家讲座、绿色通道。为每位客户建立健康档案，配备专业健康管家，提供24小时健康监护服务。</p>
+                    
+                    <h4>生活管家服务</h4>
+                    <p>全程带班、餐饮服务、安全保障、24小时应急响应。确保客户在项目期间的生活便利和安全保障。</p>
+                    
+                    <h4>快乐管家服务</h4>
+                    <p>活动策划、社群运营、精神关怀、影像记录。专注于客户的精神文化需求和情感关怀，营造温馨和谐的社群氛围。</p>
+                </div>
+            </div>
+
+            <div class="data-grid">
+                <div class="data-item">
+                    <div class="data-value">10天</div>
+                    <div class="data-label">完整体验周期</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">4个</div>
+                    <div class="data-label">体验阶段</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">3大</div>
+                    <div class="data-label">管家服务体系</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">100%</div>
+                    <div class="data-label">沉浸式体验</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第六章：运营与管理 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第六章</div>
+                <h1 class="chapter-title">运营与管理</h1>
+                <div class="chapter-subtitle">Operations & Management</div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>组织架构</h3>
+                    <p>项目采用扁平化管理结构，以项目总负责人为核心，下设运营部、市场部、后勤部三大职能部门。运营部作为核心部门，下设活动策划组、客户服务组、健康服务组，确保服务质量和客户体验。</p>
+                    
+                    <div class="highlight-box">
+                        <h4>核心团队配置</h4>
+                        <ul class="styled-list">
+                            <li><strong>项目总负责人：</strong>统筹全局，对接中信国安</li>
+                            <li><strong>运营总监：</strong>负责日常运营和服务质量管控</li>
+                            <li><strong>市场总监：</strong>负责品牌推广和客户获取</li>
+                            <li><strong>后勤总监：</strong>负责供应链管理和成本控制</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>客户服务流程</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>触达与咨询</h4>
+                            <p>通过短视频、渠道推荐、口碑传播了解项目，电话/微信咨询</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>成交与预约</h4>
+                            <p>线上/线下支付定金，确认档期，发送行前通知</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>迎接与入住</h4>
+                            <p>专车接站，欢迎仪式，办理入住，破冰活动</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>沉浸式体验</h4>
+                            <p>按照10日活动流程参与各项文化康养活动</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>离店与欢送</h4>
+                            <p>欢送仪式，收集反馈，赠送纪念品</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>后续维系</h4>
+                            <p>拉入社群，定期推送，组织返场活动，鼓励口碑分享</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-grid">
+                <div class="info-card">
+                    <h4>产品迭代能力</h4>
+                    <p>根据用户反馈，每季度对活动内容进行微调，每年进行一次大的版本升级，确保产品持续优化。</p>
+                </div>
+                <div class="info-card">
+                    <h4>社群运营能力</h4>
+                    <p>将每一期客户转化为忠实粉丝和传播节点，构建高粘性的私域流量池，实现口碑裂变。</p>
+                </div>
+                <div class="info-card">
+                    <h4>供应链整合能力</h4>
+                    <p>与优质的文化、健康、老年用品供应商建立战略合作，丰富体验内容并开拓新的变现渠道。</p>
+                </div>
+                <div class="info-card">
+                    <h4>人才培养能力</h4>
+                    <p>建立标准化的"带队经理"培训和认证体系，确保服务质量的一致性和专业性。</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>质量管控体系</h4>
+                <p>建立完善的服务标准和质量监控体系，通过客户满意度调研、神秘客户检查、员工绩效考核等多维度手段，确保服务质量持续改进。同时建立客户投诉快速响应机制，24小时内处理客户问题，将服务瑕疵转化为改进机会。</p>
+            </div>
+        </div>
+
+        <!-- 第七章：品牌营销与推广 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第七章</div>
+                <h1 class="chapter-title">品牌营销与市场推广</h1>
+                <div class="chapter-subtitle">Brand Marketing & Promotion</div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>品牌IP化战略</h3>
+                    
+                    <h4>项目IP</h4>
+                    <p>将「重返盛明·第二人生」打造成强识别度的文化符号，通过统一的视觉形象、标准化的服务流程、独特的文化内涵，建立品牌在消费者心中的独特地位。</p>
+                    
+                    <h4>个人IP</h4>
+                    <p>挖掘并包装"明星学员"，通过他们的真实体验和精彩故事，成为品牌的"野生代言人"。鼓励学员分享体验心得，形成用户生成内容（UGC），增强品牌真实性和感染力。</p>
+                    
+                    <h4>内容IP</h4>
+                    <p>制作高质量短视频、微纪录片，记录学员的文化穿越之旅，进行全网分发。通过专业的内容制作和精准的渠道投放，扩大品牌影响力。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>营销推广三步走</h3>
+                    
+                    <h4>第一阶段：冷启动期（前2个月）</h4>
+                    <p><strong>核心目标：</strong>跑通模式，积累首批种子用户和口碑素材</p>
+                    <ul class="styled-list">
+                        <li>渠道合作：与老年大学协会、新华社等合作机构定向邀约</li>
+                        <li>私域启动：利用燕园玮智已有用户资源进行首批招募</li>
+                        <li>内容预热：启动抖音/视频号，发布第一城风光、筹备花絮</li>
+                    </ul>
+                    
+                    <h4>第二阶段：增长期（第3-8个月）</h4>
+                    <p><strong>核心目标：</strong>扩大知名度，实现规模化获客</p>
+                    <ul class="styled-list">
+                        <li>短视频矩阵营销：批量生产体验类视频，进行付费投流</li>
+                        <li>口碑裂变：推出"老带新"奖励计划，鼓励老客户推荐</li>
+                        <li>媒体合作：与老年垂直媒体、旅游博主合作深度报道</li>
+                    </ul>
+                    
+                    <h4>第三阶段：品牌塑造期（第9个月后）</h4>
+                    <p><strong>核心目标：</strong>树立行业标杆，构建品牌护城河</p>
+                    <ul class="styled-list">
+                        <li>品牌事件营销：举办年度"重返盛明"文化节</li>
+                        <li>IP授权与合作：与影视、游戏、文创产品开发商探讨合作</li>
+                        <li>建立行业标准：发布《沉浸式文化康养服务标准》</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">营销漏斗模型</div>
+                <svg width="500" height="300" viewBox="0 0 500 300" class="svg-chart">
+                    <defs>
+                        <linearGradient id="funnelGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="funnelGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="funnelGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="funnelGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Funnel stages -->
+                    <rect x="50" y="50" width="400" height="40" fill="url(#funnelGrad1)" rx="5"/>
+                    <text x="250" y="75" text-anchor="middle" font-size="14" fill="white" font-weight="bold">认知阶段 - 短视频营销、渠道合作、口碑传播</text>
+                    
+                    <rect x="75" y="110" width="350" height="40" fill="url(#funnelGrad2)" rx="5"/>
+                    <text x="250" y="135" text-anchor="middle" font-size="14" fill="white" font-weight="bold">兴趣阶段 - 深度内容、体验分享、专家背书</text>
+                    
+                    <rect x="100" y="170" width="300" height="40" fill="url(#funnelGrad3)" rx="5"/>
+                    <text x="250" y="195" text-anchor="middle" font-size="14" fill="white" font-weight="bold">决策阶段 - 限时优惠、社群推荐、试听体验</text>
+                    
+                    <rect x="125" y="230" width="250" height="40" fill="url(#funnelGrad4)" rx="5"/>
+                    <text x="250" y="255" text-anchor="middle" font-size="14" fill="white" font-weight="bold">行动阶段 - 便捷支付、贴心服务、口碑裂变</text>
+                </svg>
+            </div>
+
+            <div class="data-grid">
+                <div class="data-item">
+                    <div class="data-value">3个</div>
+                    <div class="data-label">IP化战略维度</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">3个</div>
+                    <div class="data-label">营销推广阶段</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">4层</div>
+                    <div class="data-label">营销漏斗模型</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">全渠道</div>
+                    <div class="data-label">营销覆盖范围</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第八章：商业模式 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第八章</div>
+                <h1 class="chapter-title">商业模式与财务分析</h1>
+                <div class="chapter-subtitle">Business Model</div>
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-text">"低价引流 → 高品体验 → 社群转化 → IP增值"</div>
+                <div class="quote-author">— 核心商业逻辑</div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>商业模式画布</h3>
+                    
+                    <h4>价值主张</h4>
+                    <p>为活力老人提供集文化体验、健康颐养、社交娱乐、价值实现于一体的，高性价比、沉浸式文化康养旅居产品（老年主题乐园）。</p>
+                    
+                    <h4>关键合作伙伴</h4>
+                    <p>中信国安第一城、老年大学协会、老年医学学会、新华社、社区居委会、旅行社、健康服务机构、非遗传承人。</p>
+                    
+                    <h4>关键业务</h4>
+                    <p>产品研发与迭代、活动策划与执行、市场营销与招生、社群运营与维护、供应链管理。</p>
+                    
+                    <h4>核心资源</h4>
+                    <p>第一城物理空间、燕园玮智运营团队与品牌、北大校企背景、合作伙伴网络、用户数据与社群。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>收入来源结构</h3>
+                    
+                    <div class="info-card">
+                        <h4>核心收入（70-80%）</h4>
+                        <ul class="styled-list">
+                            <li>10天体验营：1500元/人</li>
+                            <li>15天深度营：2000元/人</li>
+                            <li>月度旅居：3000元+/人</li>
+                            <li>季度/年度会员服务</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>增值收入（15-20%）</h4>
+                        <ul class="styled-list">
+                            <li>定制化服务（一对一理疗）</li>
+                            <li>文创产品销售</li>
+                            <li>老年用品推荐佣金</li>
+                            <li>活动赞助与供应商推广费</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>远期收入（5-10%）</h4>
+                        <ul class="styled-list">
+                            <li>IP授权与品牌输出</li>
+                            <li>培训与咨询服务</li>
+                            <li>投资收益与股权收入</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">商业模式闭环</div>
+                <svg width="600" height="400" viewBox="0 0 600 400" class="svg-chart">
+                    <defs>
+                        <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                            <stop offset="25%" style="stop-color:#f39c12;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#27ae60;stop-opacity:1" />
+                            <stop offset="75%" style="stop-color:#3498db;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- 中心圆 -->
+                    <circle cx="300" cy="200" r="60" fill="url(#circleGrad)" opacity="0.8"/>
+                    <text x="300" y="205" text-anchor="middle" font-size="14" fill="white" font-weight="bold">商业闭环</text>
+                    
+                    <!-- 外围节点 -->
+                    <circle cx="300" cy="80" r="40" fill="#e74c3c"/>
+                    <text x="300" y="85" text-anchor="middle" font-size="12" fill="white" font-weight="bold">低价引流</text>
+                    
+                    <circle cx="450" cy="150" r="40" fill="#f39c12"/>
+                    <text x="450" y="155" text-anchor="middle" font-size="12" fill="white" font-weight="bold">高品体验</text>
+                    
+                    <circle cx="450" cy="250" r="40" fill="#27ae60"/>
+                    <text x="450" y="255" text-anchor="middle" font-size="12" fill="white" font-weight="bold">社群转化</text>
+                    
+                    <circle cx="300" cy="320" r="40" fill="#3498db"/>
+                    <text x="300" y="325" text-anchor="middle" font-size="12" fill="white" font-weight="bold">IP增值</text>
+                    
+                    <circle cx="150" cy="250" r="40" fill="#9b59b6"/>
+                    <text x="150" y="255" text-anchor="middle" font-size="12" fill="white" font-weight="bold">口碑裂变</text>
+                    
+                    <circle cx="150" cy="150" r="40" fill="#34495e"/>
+                    <text x="150" y="155" text-anchor="middle" font-size="12" fill="white" font-weight="bold">规模扩张</text>
+                    
+                    <!-- 连接线 -->
+                    <path d="M300 120 L300 140" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <path d="M340 160 L410 150" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <path d="M450 190 L450 210" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <path d="M410 250 L340 240" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <path d="M300 280 L300 260" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <path d="M260 240 L190 250" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <path d="M150 210 L150 190" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <path d="M190 150 L260 160" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- 第九章：财务分析 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第九章</div>
+                <h1 class="chapter-title">财务分析与投资回报</h1>
+                <div class="chapter-subtitle">Financial Analysis</div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>成本结构分析</h3>
+                    
+                    <table class="financial-table">
+                        <thead>
+                            <tr>
+                                <th>成本项目</th>
+                                <th>月度成本（万元）</th>
+                                <th>占比</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="category">场地租赁费</td>
+                                <td> 15</td>
+                                <td>30%</td>
+                            </tr>
+                            <tr>
+                                <td class="category">人员工资</td>
+                                <td> 12</td>
+                                <td>24%</td>
+                            </tr>
+                            <tr>
+                                <td class="category">餐饮成本</td>
+                                <td> 8</td>
+                                <td>16%</td>
+                            </tr>
+                            <tr>
+                                <td class="category">活动物料</td>
+                                <td> 5</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <td class="category">营销推广</td>
+                                <td> 6</td>
+                                <td>12%</td>
+                            </tr>
+                            <tr>
+                                <td class="category">其他运营</td>
+                                <td> 4</td>
+                                <td>8%</td>
+                            </tr>
+                            <tr class="total">
+                                <td class="category">总计</td>
+                                <td> 50</td>
+                                <td>100%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content-block">
+                    <h3>收入预测模型</h3>
+                    
+                    <h4>基础假设</h4>
+                    <ul class="styled-list">
+                        <li>每期招生30人，月均3期，年均36期</li>
+                        <li>客单价1500元，年度复购率30%</li>
+                        <li>增值服务渗透率20%，客单价500元</li>
+                        <li>第二年开始推出高价产品，占比30%</li>
+                    </ul>
+                    
+                    <table class="financial-table">
+                        <thead>
+                            <tr>
+                                <th>年度</th>
+                                <th>服务人次</th>
+                                <th>营业收入（万元）</th>
+                                <th>净利润
