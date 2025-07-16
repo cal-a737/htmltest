@@ -1447,37 +1447,37 @@
                         <tbody>
                             <tr>
                                 <td class="category">场地租赁费</td>
-                                <td> 15</td>
+                                <td>15</td>
                                 <td>30%</td>
                             </tr>
                             <tr>
                                 <td class="category">人员工资</td>
-                                <td> 12</td>
+                                <td>12</td>
                                 <td>24%</td>
                             </tr>
                             <tr>
                                 <td class="category">餐饮成本</td>
-                                <td> 8</td>
+                                <td>8</td>
                                 <td>16%</td>
                             </tr>
                             <tr>
                                 <td class="category">活动物料</td>
-                                <td> 5</td>
+                                <td>5</td>
                                 <td>10%</td>
                             </tr>
                             <tr>
                                 <td class="category">营销推广</td>
-                                <td> 6</td>
+                                <td>6</td>
                                 <td>12%</td>
                             </tr>
                             <tr>
                                 <td class="category">其他运营</td>
-                                <td> 4</td>
+                                <td>4</td>
                                 <td>8%</td>
                             </tr>
                             <tr class="total">
                                 <td class="category">总计</td>
-                                <td> 50</td>
+                                <td>50</td>
                                 <td>100%</td>
                             </tr>
                         </tbody>
@@ -1501,4 +1501,304 @@
                                 <th>年度</th>
                                 <th>服务人次</th>
                                 <th>营业收入（万元）</th>
-                                <th>净利润
+                                <th>净利润（万元）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第1年</td>
+                                <td>1,080</td>
+                                <td>180</td>
+                                <td>-420</td>
+                            </tr>
+                            <tr>
+                                <td>第2年</td>
+                                <td>1,400</td>
+                                <td>320</td>
+                                <td>-80</td>
+                            </tr>
+                            <tr>
+                                <td>第3年</td>
+                                <td>1,800</td>
+                                <td>450</td>
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <td>第4年</td>
+                                <td>2,200</td>
+                                <td>580</td>
+                                <td>280</td>
+                            </tr>
+                            <tr>
+                                <td>第5年</td>
+                                <td>2,600</td>
+                                <td>720</td>
+                                <td>420</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="profit-highlight">
+                        预计第3年实现盈利
+                        <div class="profit-rate">5年累计净利润：350万元</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">5年财务预测图</div>
+                <svg width="600" height="300" viewBox="0 0 600 300" class="svg-chart">
+                    <defs>
+                        <linearGradient id="revenueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#27ae60;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#27ae60;stop-opacity:0.3" />
+                        </linearGradient>
+                        <linearGradient id="profitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#3498db;stop-opacity:0.3" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- 坐标轴 -->
+                    <line x1="50" y1="250" x2="550" y2="250" stroke="#333" stroke-width="2"/>
+                    <line x1="50" y1="50" x2="50" y2="250" stroke="#333" stroke-width="2"/>
+                    
+                    <!-- 收入曲线 -->
+                    <path d="M100 200 L200 170 L300 130 L400 100 L500 70" stroke="#27ae60" stroke-width="3" fill="none"/>
+                    <polygon points="100,200 200,170 300,130 400,100 500,70 500,250 100,250" fill="url(#revenueGrad)"/>
+                    
+                    <!-- 利润曲线 -->
+                    <path d="M100 280 L200 270 L300 220 L400 180 L500 120" stroke="#3498db" stroke-width="3" fill="none"/>
+                    
+                    <!-- 数据点 -->
+                    <circle cx="100" cy="200" r="4" fill="#27ae60"/>
+                    <circle cx="200" cy="170" r="4" fill="#27ae60"/>
+                    <circle cx="300" cy="130" r="4" fill="#27ae60"/>
+                    <circle cx="400" cy="100" r="4" fill="#27ae60"/>
+                    <circle cx="500" cy="70" r="4" fill="#27ae60"/>
+                    
+                    <circle cx="100" cy="280" r="4" fill="#3498db"/>
+                    <circle cx="200" cy="270" r="4" fill="#3498db"/>
+                    <circle cx="300" cy="220" r="4" fill="#3498db"/>
+                    <circle cx="400" cy="180" r="4" fill="#3498db"/>
+                    <circle cx="500" cy="120" r="4" fill="#3498db"/>
+                    
+                    <!-- 标签 -->
+                    <text x="100" y="270" text-anchor="middle" font-size="12" fill="#333">第1年</text>
+                    <text x="200" y="270" text-anchor="middle" font-size="12" fill="#333">第2年</text>
+                    <text x="300" y="270" text-anchor="middle" font-size="12" fill="#333">第3年</text>
+                    <text x="400" y="270" text-anchor="middle" font-size="12" fill="#333">第4年</text>
+                    <text x="500" y="270" text-anchor="middle" font-size="12" fill="#333">第5年</text>
+                    
+                    <!-- 图例 -->
+                    <rect x="450" y="30" width="15" height="3" fill="#27ae60"/>
+                    <text x="470" y="35" font-size="12" fill="#333">营业收入</text>
+                    <rect x="450" y="45" width="15" height="3" fill="#3498db"/>
+                    <text x="470" y="50" font-size="12" fill="#333">净利润</text>
+                </svg>
+            </div>
+
+            <div class="data-grid">
+                <div class="data-item">
+                    <div class="data-value">3年</div>
+                    <div class="data-label">盈利周期</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">350万</div>
+                    <div class="data-label">5年累计利润</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">30%</div>
+                    <div class="data-label">年度复购率</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-value">58%</div>
+                    <div class="data-label">第5年净利率</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第十章：风险分析与规避 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第十章</div>
+                <h1 class="chapter-title">风险分析与规避措施</h1>
+                <div class="chapter-subtitle">Risk Analysis</div>
+            </div>
+
+            <div class="risk-card">
+                <div class="risk-header">运营风险</div>
+                <div class="risk-content">
+                    <div class="risk-item">
+                        <div class="risk-title">服务质量不稳定</div>
+                        <div class="risk-description">新团队磨合期可能出现服务标准不一致，影响客户体验和口碑。</div>
+                        <div class="risk-solution"><strong>应对措施：</strong>建立详细的SOP标准作业程序，实施严格的培训认证制度，设立质量监督岗位，建立客户反馈快速响应机制。</div>
+                    </div>
+                    
+                    <div class="risk-item">
+                        <div class="risk-title">安全事故风险</div>
+                        <div class="risk-description">老年群体身体机能下降，活动中可能发生意外伤害事故。</div>
+                        <div class="risk-solution"><strong>应对措施：</strong>购买充足的责任保险，配备专业医护人员，建立完善的应急预案，对高风险活动进行特别管控。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="risk-card">
+                <div class="risk-header">市场风险</div>
+                <div class="risk-content">
+                    <div class="risk-item">
+                        <div class="risk-title">竞争对手模仿</div>
+                        <div class="risk-description">模式成功后可能被快速复制，面临同质化竞争和价格战。</div>
+                        <div class="risk-solution"><strong>应对措施：</strong>加快品牌建设和IP化进程，建立用户忠诚度，持续产品创新，构建供应链壁垒，申请相关知识产权保护。</div>
+                    </div>
+                    
+                    <div class="risk-item">
+                        <div class="risk-title">客源不足</div>
+                        <div class="risk-description">市场推广效果不达预期，无法获得足够的客户流量。</div>
+                        <div class="risk-solution"><strong>应对措施：</strong>多渠道营销布局，建立合作伙伴网络，加强口碑营销，适时调整价格策略，开发多元化产品满足不同需求。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="risk-card">
+                <div class="risk-header">财务风险</div>
+                <div class="risk-content">
+                    <div class="risk-item">
+                        <div class="risk-title">现金流紧张</div>
+                        <div class="risk-description">前期投入大，回收周期长，可能面临现金流断裂风险。</div>
+                        <div class="risk-solution"><strong>应对措施：</strong>合理控制扩张节奏，建立多元化收入来源，与金融机构建立授信关系，设立风险准备金，优化收款周期。</div>
+                    </div>
+                    
+                    <div class="risk-item">
+                        <div class="risk-title">成本上涨</div>
+                        <div class="risk-description">人工、租金、原材料成本上涨压缩利润空间。</div>
+                        <div class="risk-solution"><strong>应对措施：</strong>建立成本预警机制，与供应商签订长期合作协议，提高运营效率，适时调整产品价格，开发高毛利产品。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="risk-card">
+                <div class="risk-header">政策风险</div>
+                <div class="risk-content">
+                    <div class="risk-item">
+                        <div class="risk-title">政策变化</div>
+                        <div class="risk-description">相关政策法规变化可能影响项目运营和发展。</div>
+                        <div class="risk-solution"><strong>应对措施：</strong>密切关注政策动向，加强与监管部门沟通，确保合规经营，建立政策风险评估机制，制定应对预案。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>风险管控体系</h4>
+                <p>建立"事前预防、事中控制、事后处理"的全流程风险管控体系。通过风险识别、评估、监控、应对四个环节，形成闭环管理。设立风险管理委员会，定期进行风险评估和应急演练，确保项目稳健发展。</p>
+            </div>
+        </div>
+
+        <!-- 第十一章：项目总结 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-number">第十一章</div>
+                <h1 class="chapter-title">项目总结与展望</h1>
+                <div class="chapter-subtitle">Conclusion & Outlook</div>
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-text">"站在银发经济的风口，用文化的力量点亮长者的第二人生"</div>
+                <div class="quote-author">— 项目愿景</div>
+            </div>
+
+            <div class="two-column">
+                <div class="content-block">
+                    <h3>项目核心价值</h3>
+                    <p><strong>第一城「重返盛明·第二人生」项目</strong>，是站在"银发经济"和"文旅融合"两大时代风口上的创新实践。它精准抓住了活力老人从物质满足向精神追求升级的核心需求，以独特的"沉浸式文化康养"模式，解决了当前市场的核心痛点。</p>
+                    
+                    <p>项目具备<strong>天时（政策支持）、地利（独特场地）、人和（专业团队）</strong>的成功要素。通过务实的"低价引流、高品运营、社群深耕、IP增值"的商业路径，我们有信心在短期内跑通模式，快速实现盈利。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>成功关键要素</h3>
+                    
+                    <div class="info-card">
+                        <h4>独特性优势</h4>
+                        <p>国内首创"明文化穿越"主题，第一城独特场景，北大品牌背书，形成强大的差异化竞争优势。</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>商业模式创新</h4>
+                        <p>"文化+康养+社交"三位一体，满足老年人多层次需求，建立可持续的商业闭环。</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>运营体系完善</h4>
+                        <p>标准化服务流程，专业化团队配置，精细化成本控制，确保项目稳健运营。</p>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>发展前景展望</h3>
+                    
+                    <h4>短期目标（1年内）</h4>
+                    <p>在第一城成功运营首个项目，服务1000+长者，建立标准化运营体系，实现盈亏平衡，积累丰富的运营经验和用户口碑。</p>
+                    
+                    <h4>中期目标（3年内）</h4>
+                    <p>在京津冀地区复制推广3-5个项目点，服务10000+长者，成为区域知名的文化康养品牌，建立行业标准和影响力。</p>
+                    
+                    <h4>长期目标（5年内）</h4>
+                    <p>在全国主要城市布局20+项目点，服务100000+长者，成为中国文化康养旅居行业的领军品牌，推动行业发展和标准制定。</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>社会价值意义</h3>
+                    <p>本项目不仅是一个商业项目，更承载着重要的社会价值。通过创新的文化康养模式，我们为3亿银发群体提供了一种全新的生活方式选择，让传统文化在新时代焕发生机，让每一位长者都能在文化的滋养中找到人生新的意义和价值。</p>
+                    
+                    <p>我们相信，随着项目的成功实施和推广，将为构建老有所乐、老有所为的和谐社会贡献重要力量，成为银发经济发展的典型案例和行业标杆。</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">项目发展路径图</div>
+                <svg width="700" height="200" viewBox="0 0 700 200" class="svg-chart">
+                    <defs>
+                        <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                            <stop offset="33%" style="stop-color:#f39c12;stop-opacity:1" />
+                            <stop offset="66%" style="stop-color:#3498db;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Success path -->
+                    <path d="M50 150 Q200 50 350 100 Q500 150 650 50" stroke="url(#successGrad)" stroke-width="6" fill="none"/>
+                    
+                    <!-- Milestones -->
+                    <circle cx="50" cy="150" r="12" fill="#e74c3c"/>
+                    <text x="50" y="180" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold">项目启动</text>
+                    
+                    <circle cx="250" cy="75" r="12" fill="#f39c12"/>
+                    <text x="250" y="105" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold">模式验证</text>
+                    
+                    <circle cx="450" cy="125" r="12" fill="#3498db"/>
+                    <text x="450" y="155" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold">规模扩张</text>
+                    
+                    <circle cx="650" cy="50" r="12" fill="#27ae60"/>
+                    <text x="650" y="80" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold">品牌标杆</text>
+                    
+                    <!-- Success indicators -->
+                    <text x="350" y="30" text-anchor="middle" font-size="16" fill="#2c3e50" font-weight="bold">成功发展路径</text>
+                </svg>
+            </div>
+
+            <div class="highlight-box">
+                <h4>结语</h4>
+                <p>第一城「重返盛明·第二人生」项目，承载着让每一位长者都能在文化的滋养中重新定义人生价值的美好愿景。我们相信，通过专业的运营、创新的模式、优质的服务，这个项目必将成为中国文化康养旅居行业的标杆，为银发经济的发展贡献重要力量。</p>
+                <p style="text-align: center; margin-top: 20px; font-weight: bold; color: #e74c3c;">来第一城，着一身风华，过第二人生！</p>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="page-footer">
+            第一城「重返盛明·第二人生」文化康养旅居项目 | 燕园玮智（北京）科技有限公司 | 2025年度商业计划书
+        </div>
+    </div>
+</body>
+</html>
